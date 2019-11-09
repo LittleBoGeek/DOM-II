@@ -18,11 +18,11 @@ navigation[3].addEventListener('click', (event) => {
 })
 
 
-navigation[0].addEventListener('"mouseover', (event) => {
+navigation[0].addEventListener('mouseover', (event) => {
     preventDefault();
     event.target.style.background="yellow";
 })
-navigation[1].addEventListener('"mouseout', (event) => {
+navigation[1].addEventListener('mouseout', (event) => {
    event.target.style.background="dodgerblue";
 })
 navigation[2].addEventListener('click', (event) => {
@@ -37,13 +37,7 @@ let counter = function () {
     console.log("Click me again");
 }
 
-let buttons = document.querySelectorAll('.btn');
-buttons[0].addEventListener('click', (event) => {
-    console.log("buton was clicked")
-})
-buttons[2].addEventListener('click', (event) => {
-    console.log("buton was clicked")
-})
+
 
 let h1 = document.querySelector("h1");
 
@@ -55,6 +49,11 @@ h1.addEventListener('dblclick', function (event) {
   });
 
 
+  const buttons = document.querySelectorAll('.btn')
+  buttons[0].addEventListener('mouseover', (event) => {
+      event.stopPropagation();
+      event.target.textContent="help";
+  })
 
 
 
