@@ -1,4 +1,5 @@
 // Your code goes here
+import { gsap } from "gsap";
 
  let navigation = document.querySelectorAll("a")
 
@@ -50,17 +51,40 @@ h1.addEventListener('dblclick', function (event) {
 
 
   const buttons = document.querySelectorAll('.btn')
+
   buttons[0].addEventListener('mouseover', (event) => {
       event.stopPropagation();
       event.target.textContent="help";
   })
 
+  buttons[1].addEventListener('mouseover', (event) => {
+    event.stopPropagation();
+    event.target.textContent="me";
+})
+
+buttons[2].addEventListener('mouseover', (event) => {
+    event.stopPropagation();
+    event.target.textContent="please";
+})
 
 
 
+//   buttons[1].addEventListener('click', (event) => {
+//     event.stopPropagation();
+//     event.target.textContent="It Worked"
+// })
+
+
+//  buttons[2].addEventListener('click', (event) => {
+//      event.target.textContent="It Worked"
+
+//  })
   
+buttons.forEach((item) =>{
+    item.addEventListener('click', (e)  => {
+        event.target.textContent="Sign Me Up!"
+        
+    })
+})
 
-
-
-
-  
+//gsap.to(".logo-heading", {duration: 1, x: 100}); playing around with gsap
